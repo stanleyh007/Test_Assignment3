@@ -1,0 +1,29 @@
+Non-testable code:
+
+1. CheckStyle: 22 errors, e.g. VariableName Check, VisibilityModifier Check and MagicNumber Check
+
+2. FindBugs: 3 bugs under 2 categories, i.e. Dodgy code and Malicious code vulnerability
+
+Dodgy Code: 
+
+Unused public or protected field
+This field is never used.  The field is public or protected, so perhaps it is intended to be used with classes not seen as part of the analysis. If not, consider removing it from the class.
+
+Malicious code vulnerability:
+
+Field isn't final but should be
+This static field public but not final, and could be changed by malicious code or by accident from another package. The field could be made final to avoid this vulnerability.
+
+Field should be package protected
+A mutable static field could be changed by malicious code or by accident. The field could be made package protected to avoid this vulnerability.
+
+3. JaCoCo: Our report shows 39% instructions coverage, 2/4 for cyclomatic complexity and so on.
+
+The 83 instructions shown by JaCoCo in the report refers to the bytecode instructions as opposed to ordinary Java code instructions.
+
+
+Testable code:
+no errors
+
+
+
